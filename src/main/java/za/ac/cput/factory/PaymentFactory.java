@@ -1,3 +1,8 @@
+// Payment Class.Factory
+// Payment Factory Class
+// Author: Sobantu Malotana (220472122)
+// Date: 24 March 2023
+
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Payment;
