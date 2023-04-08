@@ -1,3 +1,8 @@
+// IRentalRepository Class.Repository
+// IRental Repository Class
+// Author: Sobantu Malotana (220472122)
+// Date: 07 April 2023
+
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Rental;
