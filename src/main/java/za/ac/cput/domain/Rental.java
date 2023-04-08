@@ -1,7 +1,7 @@
 // Rental Class.Domain
 // Rental POJO Class
 // Author: Sobantu Malotana (220472122)
-// Date: 24 March 2023
+// Date: 07 April 2023
 
 package za.ac.cput.domain;
 
