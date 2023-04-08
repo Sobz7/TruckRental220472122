@@ -1,4 +1,4 @@
-//Admin Class
+//ReturnTruck Class
 //Author: Chenique Jacobs (220388172)
 //Date: 07/04/2023
 
