@@ -1,3 +1,9 @@
+/*
+LoginDetail.java
+2nd Domain entity
+@Author: Siyakha Manisi (219239657)
+09 April 2023
+* */
 package za.ac.cput.domain;
 
 import java.util.Objects;
