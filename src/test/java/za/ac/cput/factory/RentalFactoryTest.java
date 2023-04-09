@@ -1,5 +1,5 @@
 // RentalFactory Test.java
-// Test for the Rental Factory
+// Rental Factory Test Classes
 // Author: Sobantu Malotana (220472122)
 // Date: 07 April 2023
 

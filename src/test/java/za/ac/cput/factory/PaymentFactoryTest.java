@@ -1,5 +1,5 @@
 // PaymentFactory Test.java
-// Test for the Payment Factory
+// Payment Factory Test Classes
 // Author: Sobantu Malotana (220472122)
 // Date: 07 April 2023
 package za.ac.cput.factory;
