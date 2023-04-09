@@ -1,4 +1,4 @@
-// IRental Repository Class
+// IRental Repository Class.java
 // Author: Sobantu Malotana (220472122)
 // Date: 07 April 2023
 
