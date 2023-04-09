@@ -5,12 +5,16 @@ package za.ac.cput.repository;
 
 import za.ac.cput.domain.ReturnTruck;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class ReturnTruckRepository implements IReturnTruckRepository {
 
     private static ReturnTruckRepository repository = null;
-    private Set<ReturnTruck>returnTruckDB = null;
+    private Set<ReturnTruck> returnTruckDB = null;
+
+    private ReturnTruckRepository(){returnTruckDB = new HashSet<ReturnTruck>();
+    }
 
     public static ReturnTruckRepository getRepository(){
         if(repository == null){
