@@ -1,4 +1,4 @@
-// Rental RepositoryTest Class
+// Rental Repository Test Class
 // Author: Sobantu Malotana (220472122)
 // Date: 07 April 2023
 
