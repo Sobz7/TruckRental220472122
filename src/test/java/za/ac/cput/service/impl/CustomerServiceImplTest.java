@@ -1,10 +1,4 @@
-
-//CustomerRepository Test.java
-// Class for the Customer Repository Test
-// Author: Jordy Meye (220072841)
-// Date: 24 03 2023
-
-package za.ac.cput.repository;
+package za.ac.cput.service.impl;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -14,26 +8,25 @@ import za.ac.cput.factory.CustomerFactory;
 import za.ac.cput.repository.impl.CustomerRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class CustomerRepositoryTest {
-
-    private static CustomerRepository repository = CustomerRepository.getRepository();
+class CustomerServiceImplTest {
+    private static CustomerServiceImpl service = null;
     private static Customer customer = CustomerFactory.createEmployee("yzyzyyydy" , "ray", "walker" , "ray@gmail.com" , "obs", "yzyzyyydy");
 
 
+    public CustomerServiceImplTest() {service = CustomerServiceImpl.getService();}
     @Test
     void a_create() {
 
-        Customer created = repository.create(customer);
+        Customer created = service.create(customer);
 
-        // assertEquals(employee, created.getCustomerId());
+        assertNotNull(created);
         System.out.println("create: " + created);
     }
 
     @Test
     void b_read() {
-        Customer read2 = repository.read(customer.getCustomerId());
+        Customer read2 = service.read(customer.getCustomerId());
         assertNotNull(read2);
         System.out.println("read: " + read2);
 
@@ -43,10 +36,10 @@ class CustomerRepositoryTest {
     void c_update() {
 
 
-        Customer updated = new Customer.Builder().copy(customer).setName("meye").setSurname("Ndong").setEmail("andy@outlook.com").setAddress("rondebosch").setLicenseNumber("zggzgzgz").build();
+        Customer updated = new Customer.Builder().copy(customer).setName("Burger").setSurname("Naidoo").setEmail("Kruben@outlook.com").setAddress("rondebosch").setLicenseNumber("zggzgzgz").build();
 
 
-        assertNotNull(repository.update(updated));
+        assertNotNull(service.update(updated));
         System.out.println("updated: " + updated);
 
     }
@@ -54,7 +47,7 @@ class CustomerRepositoryTest {
     @Test
     void e_delete() {
 
-        boolean success = repository.delete(customer.getCustomerId());
+        boolean success = service.delete(customer.getCustomerId());
         assertTrue(success);
         System.out.println("deleted: " + success);
 
@@ -64,7 +57,7 @@ class CustomerRepositoryTest {
     @Test
     void d_getAll() {
         System.out.println("show all: ");
-        System.out.println(repository.getAll());
+        System.out.println(service.getAll());
 
     }
 }

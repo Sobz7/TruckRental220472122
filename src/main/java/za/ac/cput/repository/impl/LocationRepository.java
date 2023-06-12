@@ -1,8 +1,9 @@
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 /*Author Ayanda Phumzile Khoza
 Student Number 218057172
  */
 import za.ac.cput.domain.Location;
+import za.ac.cput.repository.ILocationRepository;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -60,7 +61,7 @@ public class LocationRepository implements ILocationRepository {
                     return null;
                 }
 
-                @Override
+
                 public boolean delete()
             {
                     return false;

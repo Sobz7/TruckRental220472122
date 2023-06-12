@@ -1,9 +1,10 @@
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 /*Author Ayanda Phumzile Khoza
 Student Number 218057172
  */
 import org.apache.commons.beanutils.LazyDynaClass;
 import za.ac.cput.domain.Brand;
+import za.ac.cput.repository.IBrandRepository;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -69,7 +70,7 @@ public class BrandRepository implements IBrandRepository {
 
    }
 
-   @Override
+
    public boolean delete(){return false;
    }
 
