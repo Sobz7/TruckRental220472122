@@ -18,7 +18,7 @@ public class AdminServiceImpl implements AdminService {
         repository = AdminRepository.getRepository();
     }
 
-    private static AdminServiceImpl getService(){
+    public static AdminServiceImpl getService(){
         if (service ==null){
             service = new AdminServiceImpl();
         }

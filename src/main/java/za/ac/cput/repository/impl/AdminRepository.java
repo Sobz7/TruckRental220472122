@@ -26,25 +26,20 @@ public class AdminRepository implements IAdminRepository {
 
     }
 
-
     @Override
     public Admin create(Admin admin) {
         boolean success = adminDB.add(admin);
         if(!success)
-        return null;
+            return null;
         return admin;
     }
 
-    @Override
-    public Admin read(String s) {
-        return null;
-    }
 
 
     @Override
-    public Admin read(int adminId) {
+    public Admin read(String adminId) {
         for(Admin e : adminDB){
-            if(e.getAdminId() ==(adminId))
+            if(e.getAdminId() == Integer.parseInt((adminId)));
                 return e;
         }
         return null;
@@ -52,7 +47,7 @@ public class AdminRepository implements IAdminRepository {
 
     @Override
     public Admin update(Admin admin) {
-        Admin oldAdmin = read(admin.getAdminId());
+        Admin oldAdmin = read(String.valueOf(admin.getAdminId()));
         if(oldAdmin !=null){
             adminDB.remove(oldAdmin);
             adminDB.add(admin);

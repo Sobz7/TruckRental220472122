@@ -7,10 +7,6 @@ import za.ac.cput.domain.Admin;
 
 import java.util.Set;
 
-public interface IAdminRepository extends IRepository<Admin, String> {
-    Admin read(int adminId);
-
-    abstract boolean delete(String adminId);
-
+public interface IAdminRepository extends IRepository<Admin, String>{
     public Set<Admin> getAll();
 }
