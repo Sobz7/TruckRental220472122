@@ -23,7 +23,7 @@ class AdminRepositoryTest {
 
     @Test
     void b_read(){
-        Admin read = adminRepository.read(admin.getAdminId());
+        Admin read = adminRepository.read(String.valueOf(admin.getAdminId()));
         //assertNotNull(read);
         System.out.println("Read: "+ read);
     }
