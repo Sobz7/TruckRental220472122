@@ -5,12 +5,6 @@ import org.apache.commons.validator.EmailValidator;
 import java.util.UUID;
 
 public class Helper {
-
-
-    public static String generateId() {
-        return UUID.randomUUID().toString();
-    }
-
     public static boolean isNullorEmpty(String s){
         return (s== null || s.equals("") || s.isEmpty() || s.equalsIgnoreCase("null"));
     }
@@ -20,5 +14,7 @@ public class Helper {
         return ev.isValid(email);
     }
 
-
+    public static String generateId(){
+        return UUID.randomUUID().toString();
+    }
 }
