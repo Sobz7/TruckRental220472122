@@ -1,7 +1,4 @@
-//Domain  Protection class
-// Pojo Portection
-// Author: Jordy Meye (220072841)
-// Date: 24 03 2023
+
 
 package za.ac.cput.domain;
 
@@ -125,3 +122,4 @@ public class Protection {
         }
     }
 }
+

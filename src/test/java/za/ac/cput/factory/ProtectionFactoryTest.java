@@ -1,7 +1,3 @@
-//ProtectionFactory Test.java
-// Test for the Protection Factory
-// Author: Jordy Meye (220072841)
-// Date: 24 03 2023
 
 
 package za.ac.cput.factory;
@@ -25,3 +21,4 @@ class ProtectionFactoryTest {
     }
 
 }
+

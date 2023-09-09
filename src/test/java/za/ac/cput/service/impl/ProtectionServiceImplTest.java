@@ -1,3 +1,4 @@
+
 package za.ac.cput.service.impl;
 
 import org.junit.jupiter.api.MethodOrderer;
@@ -54,3 +55,4 @@ class ProtectionServiceImplTest {
         System.out.println(service.getAll());
     }
 }
+
