@@ -1,9 +1,6 @@
-
 //Admin Repository Class
 //Author: Chenique Jacobs (220388172)
 //Date: 07/04/2023
-
-/*
 package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Admin;
@@ -78,4 +75,3 @@ public class AdminRepository implements IAdminRepository {
         return adminDB;
     }
 }
-*/

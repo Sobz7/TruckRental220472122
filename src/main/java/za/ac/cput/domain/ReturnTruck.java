@@ -4,23 +4,15 @@
 
 package za.ac.cput.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import java.io.Serializable;
-
 import java.time.LocalDate;
 
-@Entity
-public class ReturnTruck implements Serializable {
-    @Id
-    private String returnId;
+public class ReturnTruck {
+    private int returnId;
     private int rentalId;
     private double overdueCharge;
     private LocalDate returnDate;
 
-    protected ReturnTruck(){}
-
-    private ReturnTruck(String returnId,int rentalId,double overdueCharge,LocalDate returnDate){}
+    private ReturnTruck(int returnId,int rentalId,double overdueCharge,LocalDate returnDate){};
 
 
     public ReturnTruck(Builder builder){
@@ -30,7 +22,7 @@ public class ReturnTruck implements Serializable {
         this.returnDate = builder.returnDate;
     }
 
-    public String getReturnId() {
+    public int getReturnId() {
         return returnId;
     }
 
@@ -57,12 +49,12 @@ public class ReturnTruck implements Serializable {
     }
 
     public static class Builder{
-        private String returnId;
+        private int returnId;
         private int rentalId;
         private double overdueCharge;
         private LocalDate returnDate;
 
-        public Builder setReturnId(String returnId){
+        public Builder setReturnId(int returnId){
             this.returnId = returnId;
             return this;
         }
