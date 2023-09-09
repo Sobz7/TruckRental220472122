@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 
+
+
 import org.springframework.http.*;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -79,6 +81,8 @@ class CustomerControllerTest {
         restTemplate.delete(url);
     }
 
+
+
     @Test
     void e_getAll() {
         String url = basedURL + "/getAll";
@@ -88,4 +92,6 @@ class CustomerControllerTest {
         System.out.print("show all");
         System.out.println(response.getBody());
     }
+
 }
+
