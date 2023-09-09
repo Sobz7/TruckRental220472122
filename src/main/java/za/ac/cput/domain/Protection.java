@@ -5,15 +5,22 @@
 
 package za.ac.cput.domain;
 
-public class Protection {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+import java.io.Serializable;
+
+@Entity
+public class Protection implements Serializable {
+
+    @Id
     private String insuranceId;
     private String truckId;
     private String policyType;
     private String startDate;
     private String endDate;
 
-    private Protection(){}
+
 
     public Protection(Builder builder){
         this.insuranceId= builder.insuranceId;
@@ -21,6 +28,10 @@ public class Protection {
         this.policyType= builder.policyType;
         this.startDate = builder.startDate;
         this.endDate= builder.endDate;
+    }
+
+    public Protection() {
+
     }
 
     public String getInsuranceId() {
