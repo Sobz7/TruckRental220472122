@@ -19,3 +19,4 @@ public class ProtectionFactory {
         return new Protection.Builder().setInsuranceId(insuranceId).setTruckId(truckId).setPolicyType(policyType).setStartDate(startDate).setEndDate(endDate).build();
     }
 }
+

@@ -1,4 +1,4 @@
-/*
+
 //PRotectionRepository Test.java
 // Class for the Protection Repository Test
 // Author: Jordy Meye (220072841)
@@ -67,6 +67,3 @@ class ProtectionRepositoryTest {
 
     }
 }
-
-
-*/

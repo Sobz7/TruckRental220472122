@@ -6,10 +6,9 @@ package za.ac.cput.service;
 
 import za.ac.cput.domain.Customer;
 
-import java.util.List;
 import java.util.Set;
 
 public interface CustomerService extends  IService<Customer, String>{
-    //create, read, update, delete
-    Set<Customer> getAll();
+//create, read, delete
+public Set<Customer> getAll();
 }

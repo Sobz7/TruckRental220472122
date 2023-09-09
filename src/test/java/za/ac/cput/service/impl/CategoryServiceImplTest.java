@@ -1,5 +1,8 @@
-package za.ac.cput.repository;
+package za.ac.cput.service.impl;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Category;
 import org.junit.jupiter.api.MethodOrderer;
@@ -10,9 +13,10 @@ import za.ac.cput.repository.impl.CategoryRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class CategoryRepositoryTest {
-private static CategoryRepository repository = CategoryRepository.getRespository();
-private static Category category= CategoryFactory.createCategory("66hh11","Furniture",30,"Large");
+class CategoryServiceImplTest {
+
+    private static CategoryRepository repository = CategoryRepository.getRespository();
+    private static Category category= CategoryFactory.createCategory("66hh11","Furniture",30,"Large");
 
     @Test
     void a_create() {
@@ -52,4 +56,5 @@ private static Category category= CategoryFactory.createCategory("66hh11","Furni
         System.out.println("show all:");
         System.out.println(repository.getAll());
     }
+
 }
