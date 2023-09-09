@@ -14,7 +14,7 @@ class CustomerFactoryTest {
     @Test
     public void createEmployee(){
 
-        Customer customer = CustomerFactory.createEmployee("CDI" , "ray", "walker" , "ray@gmail.com" , "obs", "yzyzyyydy");
+        Customer customer = CustomerFactory.createCustomer( "raymond", "walker" , "ray@gmail.com" , "observatory", "1687532");
         assertNotNull(customer);
         System.out.println(customer);
 

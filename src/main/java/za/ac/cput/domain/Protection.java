@@ -1,19 +1,23 @@
-//Domain  Protection class
-// Pojo Portection
-// Author: Jordy Meye (220072841)
-// Date: 24 03 2023
-
 package za.ac.cput.domain;
 
-public class Protection {
+import jakarta.persistence.Entity;
+import org.springframework.data.annotation.Id;
 
+import java.io.Serializable;
+
+@Entity
+public class Protection implements Serializable {
+
+
+    @Id
     private String insuranceId;
     private String truckId;
     private String policyType;
     private String startDate;
     private String endDate;
 
-    private Protection(){}
+
+    protected Protection(){}
 
     public Protection(Builder builder){
         this.insuranceId= builder.insuranceId;
