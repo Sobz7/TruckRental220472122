@@ -7,9 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.domain.Customer;
 import za.ac.cput.factory.CustomerFactory;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76685f55c2dfca669fefd840bee826eb1458435e
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest
 class CustomerServiceImplTest {
