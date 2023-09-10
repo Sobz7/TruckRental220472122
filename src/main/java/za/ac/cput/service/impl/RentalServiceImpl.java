@@ -1,4 +1,4 @@
-package za.ac.cput.service.impl;
+/* package za.ac.cput.service.impl;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -39,12 +39,17 @@ public class RentalServiceImpl implements RentalService {
     }
 
     @Override
+    public Rental update() {
+        return null;
+    }
+
+    @Override
     public Rental read(Integer rentalId) {
         Rental read = repository.read(rentalId);
         return read;
     }
 
-    @Override
+
     public Rental update(Rental rental) {
         Rental updated = repository.update(rental);
         return updated;
@@ -70,3 +75,4 @@ public class RentalServiceImpl implements RentalService {
         return repository.getAll();
     }
 }
+*/
