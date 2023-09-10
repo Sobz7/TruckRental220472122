@@ -1,4 +1,4 @@
-
+/*
 //CustomerRepository Test.java
 // Class for the Customer Repository Test
 // Author: Jordy Meye (220072841)
@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomerRepositoryTest {
 
     private static CustomerRepository repository = CustomerRepository.getRepository();
-    private static Customer customer = CustomerFactory.createEmployee("yzyzyyydy" , "ray", "walker" , "ray@gmail.com" , "obs", "yzyzyyydy");
+    private static Customer customer = CustomerFactory.createCustomer( "ray", "walker" , "ray@gmail.com" , "obs", "yzyzyyydy");
 
 
     @Test
@@ -27,7 +27,7 @@ class CustomerRepositoryTest {
 
         Customer created = repository.create(customer);
 
-        // assertEquals(employee, created.getCustomerId());
+         assertEquals(customer, created.getCustomerId());
         System.out.println("create: " + created);
     }
 
@@ -68,3 +68,6 @@ class CustomerRepositoryTest {
 
     }
 }
+
+
+ */

@@ -7,5 +7,6 @@ import za.ac.cput.domain.Customer;
 @Repository
 public interface ICustomerRepository extends JpaRepository<Customer, String> {
 
-    Customer read(String customerId);
+
+    Customer findByCustomerId(String customerId);
 }
