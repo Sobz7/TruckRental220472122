@@ -5,10 +5,15 @@
 
 package za.ac.cput.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
-
+@Entity
 public class Rental {
-
+@Id
+@GeneratedValue
     private int rentalId;
     private int customerId;
     private  int truckId;

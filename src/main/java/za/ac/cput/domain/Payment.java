@@ -5,10 +5,15 @@
 
 package za.ac.cput.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
-
+@Entity
 public class Payment {
-
+@Id
+@GeneratedValue
     private int paymentId;
     private String paymentType;
     private double paymentAmount;
@@ -22,7 +27,7 @@ public class Payment {
         this.paymentDate = builder.paymentDate;
     }
 
-    public Object getPaymentId() {
+    public int getPaymentId() {
         return paymentId;
     }
 

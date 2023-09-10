@@ -1,16 +1,18 @@
-// PaymentRepository Class.Repository
-// Payment Repository Class
+// Payment Repository Class.java
 // Author: Sobantu Malotana (220472122)
-// Date: 04 April 2023
+// Date: 07 April 2023
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Payment;
+import za.ac.cput.repository.IPaymentRepository;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
-
-public abstract class PaymentRepository implements IPaymentRepository{
+@Repository
+public abstract class PaymentRepository implements IPaymentRepository {
 
     private static PaymentRepository repository = null;
     private Set<Payment> paymentDB = null;
@@ -18,10 +20,26 @@ public abstract class PaymentRepository implements IPaymentRepository{
         paymentDB = new HashSet<Payment>();
     }
     public static PaymentRepository getRepository() {
-        if (repository == null);
+        if (repository == null) {
+            repository = new PaymentRepository() {
+                @Override
+                public Payment read(String s) {
+                    return null;
+                }
+
+                @Override
+                public boolean delete(String s) {
+                    return false;
+                }
+
+
+                public boolean delete() {
+                    return false;
+                }
+            };
+        }
         return repository;
     }
-
     @Override
     public Payment create(Payment payment) {
         boolean success = paymentDB.add(payment);
@@ -32,8 +50,7 @@ public abstract class PaymentRepository implements IPaymentRepository{
     @Override
     public  Payment read(int paymentId) {
         for (Payment e : paymentDB) {
-            if(e.getPaymentId().equals(paymentId));
-
+            if(Objects.equals(e.getPaymentId(), paymentId));
             return e;
         }
         return null;

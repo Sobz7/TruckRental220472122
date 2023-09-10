@@ -1,7 +1,6 @@
-// Payment Class.Factory
 // Payment Factory Class
 // Author: Sobantu Malotana (220472122)
-// Date: 24 March 2023
+// Date: 07 April 2023
 
 package za.ac.cput.factory;
 
@@ -23,5 +22,6 @@ public class PaymentFactory {
                 .setPaymentDate(paymentDate)
                 .build();
     }
+
 
 }

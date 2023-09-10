@@ -1,15 +1,16 @@
-// RentalRepository Class.Respository
-// RentalRepository Class
+// Rental Repository Class.java
 // Author: Sobantu Malotana (220472122)
-// Date: 04 April 2023
+// Date: 07 April 2023
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Rental;
+import za.ac.cput.repository.IRentalRepository;
 
 import java.util.HashSet;
 import java.util.Set;
-
+@Repository
 public abstract class RentalRepository implements IRentalRepository {
     public static RentalRepository repository = null;
 
@@ -29,6 +30,11 @@ public abstract class RentalRepository implements IRentalRepository {
                 }
 
                 @Override
+                public boolean delete(String s) {
+                    return false;
+                }
+
+
                 public boolean delete() {
                     return false;
                 }
