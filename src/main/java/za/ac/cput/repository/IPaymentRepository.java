@@ -4,10 +4,12 @@
 
 package za.ac.cput.repository;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Payment;
 
 import java.util.Set;
-
+@Repository
 public interface IPaymentRepository extends IRepository<Payment, String> {
 
     Payment read(int paymentId);

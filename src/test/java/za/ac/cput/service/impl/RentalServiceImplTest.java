@@ -3,6 +3,7 @@ package za.ac.cput.service.impl;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.domain.Rental;
 import za.ac.cput.factory.RentalFactory;
 
@@ -10,12 +11,11 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+@SpringBootTest
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class RentalServiceImplTest {
-
     private static RentalServiceImpl service = null;
-    private static final Rental rental = RentalFactory.createRental(122,12,123,"2023-04-04","2023-05-30",42750.0);
+    private static final Rental rental = RentalFactory.createRental(122,12,123, LocalDate.of(2023, 10, 30) ,LocalDate.of(2023, 10, 20) ,42750.0);
 
     public RentalServiceImplTest() {service = RentalServiceImpl.getService();}
     @Test

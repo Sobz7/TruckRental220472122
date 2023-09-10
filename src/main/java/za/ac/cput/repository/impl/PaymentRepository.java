@@ -4,12 +4,14 @@
 
 package za.ac.cput.repository.impl;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Payment;
 import za.ac.cput.repository.IPaymentRepository;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
-
+@Repository
 public abstract class PaymentRepository implements IPaymentRepository {
 
     private static PaymentRepository repository = null;
@@ -48,8 +50,7 @@ public abstract class PaymentRepository implements IPaymentRepository {
     @Override
     public  Payment read(int paymentId) {
         for (Payment e : paymentDB) {
-            if(e.getPaymentId().equals(paymentId));
-
+            if(Objects.equals(e.getPaymentId(), paymentId));
             return e;
         }
         return null;

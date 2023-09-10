@@ -18,9 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class RentalRepositoryTest {
-
     private static RentalRepository repository = RentalRepository.getRepository();
-    private static Rental rental = RentalFactory.createRental(122,12,123,"2023-04-04","2023-05-30",42750.0);
+    private static Rental rental = RentalFactory.createRental(122,12,123,LocalDate. of(2023, 10, 30) ,LocalDate. of(2023, 11, 31) ,42750.0);
 
     @Test
     void a_create() {

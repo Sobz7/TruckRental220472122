@@ -1,11 +1,14 @@
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import za.ac.cput.domain.Payment;
+import za.ac.cput.domain.Rental;
 import za.ac.cput.repository.impl.PaymentRepository;
 import za.ac.cput.service.PaymentService;
 
 import java.util.Set;
-
+@Service
 public abstract class PaymentServiceImpl implements PaymentService {
     private static PaymentServiceImpl service = null;
     private PaymentRepository repository = null;
@@ -68,8 +71,10 @@ public abstract class PaymentServiceImpl implements PaymentService {
         return success;
     }
 
-    @Override
+
+    @GetMapping("/getAll")
     public Set<Payment> getAll() {
-        return repository.getAll();
+        return PaymentService.getAll();
     }
+
 }

@@ -1,10 +1,12 @@
 package za.ac.cput.service;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Payment;
 
 import java.util.Set;
-
+@Service
 public interface PaymentService {
+
     Payment create(Payment payment);
 
     Payment read(int paymentId);
@@ -21,5 +23,9 @@ public interface PaymentService {
 
     boolean delete(Integer paymentId);
 
-    Set<Payment> getAll();
+    static Set<Payment> getAll() {
+        return null;
+    }
+
+
 }
