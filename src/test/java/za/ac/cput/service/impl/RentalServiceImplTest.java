@@ -53,4 +53,5 @@ class RentalServiceImplTest {
         System.out.println("Show all :");
         System.out.println(service.getAll());
     }
+
 }

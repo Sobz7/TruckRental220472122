@@ -6,7 +6,6 @@ import za.ac.cput.domain.Payment;
 import java.util.Set;
 @Service
 public interface PaymentService {
-
     Payment create(Payment payment);
 
     Payment read(int paymentId);

@@ -7,6 +7,7 @@ import java.util.Set;
 
 @Service
 public interface RentalService extends IService<Rental, String>{
+
     Rental read(Integer rentalId);
 
     boolean delete(Integer rentalId);

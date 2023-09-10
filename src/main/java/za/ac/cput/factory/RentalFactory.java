@@ -4,24 +4,29 @@
 
 package za.ac.cput.factory;
 
+import za.ac.cput.domain.Payment;
 import za.ac.cput.domain.Rental;
 import za.ac.cput.util.Helper;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class RentalFactory {
 
-    public static Rental createRental(int rentalId, int customerId, int truckId, String startDate, String endDate, double rentalCost) {
+    public static Rental createRental(int rentalId, int customerId, int truckId, LocalDate startDate, LocalDate endDate, double rentalCost) {
 
         if(Helper.isNullorEmpty(String.valueOf(startDate)) || Helper.isNullorEmpty(String.valueOf(endDate)))
             return null;
 
-        return new Rental.Builder().setRentalId(rentalId)
-                .setCustomerId(customerId)
-                .setTruckId(truckId)
-                .setStartDate(LocalDate.parse(startDate))
-                .setEndDate(LocalDate.parse(endDate))
-                .setRentalCost(rentalCost)
+        Rental.Builder builder = new Rental.Builder();
+        builder.setRentalId(rentalId);
+        builder.setCustomerId(customerId);
+        builder.setTruckId(truckId);
+        builder.setStartDate(LocalDate.parse(startDate.toString()));
+        builder.setEndDate(LocalDate.parse(endDate.toString()));
+        builder.setRentalCost(rentalCost);
+        return builder
                 .build();
     }
+
 }
