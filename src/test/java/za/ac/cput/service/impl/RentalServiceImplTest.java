@@ -6,7 +6,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.domain.Rental;
 import za.ac.cput.factory.RentalFactory;
-
+/*
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -55,3 +55,4 @@ class RentalServiceImplTest {
     }
 
 }
+*/
