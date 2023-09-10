@@ -1,4 +1,4 @@
-//Protection Repository .java
+/** //Protection Repository .java
 // Class for the Protection Repository
 // Author: Jordy Meye (220072841)
 // Date: 24 03 2023
@@ -76,9 +76,29 @@ public class ProtectionRepository implements IProtectionRepository {
         return true;
     }
 
-    @Override
+
     public Set<Protection> getAll() {
         return protectionDB;
     }
 
+    @Override
+    public T create(T t) {
+        return null;
+    }
+
+    @Override
+    public T read(insuranceId id) {
+        return null;
+    }
+
+    @Override
+    public T update(insuranceId t) {
+        return null;
+    }
+
+    @Override
+    public boolean delete(insuranceId id) {
+        return false;
+    }
 }
+*/

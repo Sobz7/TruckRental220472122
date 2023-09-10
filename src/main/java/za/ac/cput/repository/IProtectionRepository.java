@@ -1,3 +1,4 @@
+/**
 //Interface Protection Repository
 // Interface
 // Author: Jordy Meye (220072841)
@@ -16,3 +17,4 @@ public interface IProtectionRepository extends IRepository<Protection, String>{
     //create, read, delete
     public Set<Protection> getAll();
 }
+*/

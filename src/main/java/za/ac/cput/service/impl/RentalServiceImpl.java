@@ -1,4 +1,4 @@
-package za.ac.cput.service.impl;
+/* package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Rental;
 import za.ac.cput.repository.impl.RentalRepository;
@@ -34,12 +34,17 @@ public class RentalServiceImpl implements RentalService {
     }
 
     @Override
+    public Rental update() {
+        return null;
+    }
+
+    @Override
     public Rental read(Integer rentalId) {
         Rental read = repository.read(rentalId);
         return read;
     }
 
-    @Override
+
     public Rental update(Rental rental) {
         Rental updated = repository.update(rental);
         return updated;
@@ -61,3 +66,4 @@ public class RentalServiceImpl implements RentalService {
         return repository.getAll();
     }
 }
+*/

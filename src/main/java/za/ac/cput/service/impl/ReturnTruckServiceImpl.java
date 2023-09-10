@@ -1,6 +1,8 @@
 //ReturnTruck Service Interface
 //Author: Chenique Jacobs (220388172)
 //Date: 13/06/2023
+
+/*
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.ReturnTruck;
@@ -37,6 +39,11 @@ public class ReturnTruckServiceImpl implements ReturnTruckService {
     }
 
     @Override
+    public ReturnTruck update() {
+        return null;
+    }
+
+
     public ReturnTruck update(ReturnTruck returnTruck) {
         ReturnTruck updated = repository.update(returnTruck);
         return updated;
@@ -53,3 +60,4 @@ public class ReturnTruckServiceImpl implements ReturnTruckService {
         return repository.getAll();
     }
 }
+*/
